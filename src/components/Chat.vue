@@ -1,6 +1,6 @@
 <template>
   <div
-    class="liveChat__container bg-theme_light rounded flex flex-col h-full overflow-hidden"
+    class="liveChat__container bg-accent_light dark:bg-dark_lighten rounded flex flex-col h-full overflow-hidden"
   >
     <ChatHeader />
     <div
@@ -32,10 +32,12 @@
       <div>
         <g-link
           to="/login"
-          class="googleLogin flex justify-center items-center gap-2 mt-6 py-3 px-5 bg-theme_lighter transition hover:bg-theme_bg"
+          class="googleLogin flex justify-center items-center gap-2 mt-6 py-3 px-5 transition bg-accent hover:bg-accent_darken"
         >
-          <Icon :icon="loginIcon" color="fill-accent w-4" />
-          Sign in to Chat
+          <Icon :icon="loginIcon" color="fill-white w-4" />
+          <span class="font-medium text-white">
+            Sign in to Chat
+          </span>
         </g-link>
       </div>
     </div>
@@ -69,7 +71,7 @@ export default {
       toastMessage: '',
       toastType: '',
       showToast: false,
-      loginIcon: mdiLogin,
+      loginIcon: mdiLoginVariant,
     }
   },
   methods: {
