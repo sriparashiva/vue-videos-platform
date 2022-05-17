@@ -1,6 +1,6 @@
 <template>
   <div
-    class="liveChat__container bg-accent_light dark:bg-dark_lighten rounded flex flex-col h-full overflow-hidden"
+    class="liveChat__container bg-accent_lighten dark:bg-dark_lighten rounded flex flex-col h-full overflow-hidden"
   >
     <ChatHeader />
     <div
@@ -43,7 +43,7 @@
     </div>
     <div
       v-if="$store.getters.authChecked && $store.getters.loggedIn"
-      class="liveChat__footer flex-shrink-0 border-t-1 border-text_light border-opacity-15 px-5 py-3"
+      class="liveChat__footer flex-shrink-0 border-t-1 border-accent_darken border-opacity-15 px-5 py-3"
     >
       <ChatFooter @sendMessage="sendMessage" />
     </div>

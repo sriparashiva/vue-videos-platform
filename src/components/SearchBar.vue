@@ -29,7 +29,7 @@
       >
         <g
           fill="none"
-          stroke="#fff"
+          stroke="#aaaaaa"
           stroke-linecap="round"
           stroke-miterlimit="10"
           stroke-width="1.5"

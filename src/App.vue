@@ -17,28 +17,28 @@ export default {
 
     if (!this.$store.getters.authChecked) {
       // Check for logged in cookie
-      if (this.$cookies.isKey('NTV_Session')) {
+      if (this.$cookies.isKey('VoxTV_Session')) {
         // Check if jwt cookie has expired
-        let isValid = jwtAuth.validateExpiry(this.$cookies.get('NTV_Session'))
+        let isValid = jwtAuth.validateExpiry(this.$cookies.get('VoxTV_Session'))
 
         if (isValid) {
           // Fetch user from strapi using jwt
-          const user = await jwtAuth.getUser(this.$cookies.get('NTV_Session'))
+          const user = await jwtAuth.getUser(this.$cookies.get('VoxTV_Session'))
           if (user.error) {
             // jwt invalidated by Strapi, set logged out in store and remove cookie
             this.$store.commit('setLoggedOut')
-            this.$cookies.remove('NTV_Session')
+            this.$cookies.remove('VoxTV_Session')
           } else {
             // User authenticated by Strapi, set logged in and store user
             this.$store.commit('setLoggedIn', {
-              jwt: this.$cookies.get('NTV_Session'),
+              jwt: this.$cookies.get('VoxTV_Session'),
               user: user,
             })
           }
         } else {
           // jwt Cookie expired, set logged out in store and remove cookie
           this.$store.commit('setLoggedOut')
-          this.$cookies.remove('NTV_Session')
+          this.$cookies.remove('VoxTV_Session')
         }
       } else {
         // No login cookie present, set logged out in store
@@ -50,13 +50,13 @@ export default {
   },
   metaInfo() {
     return {
-      title: 'Nithyananda TV',
+      title: 'Vox - Understand the News',
       meta: [
         {
           key: 'description',
           name: 'description',
           content:
-            'Livestreams, Events, Discourses and Teachings of SPH Nithyananda Paramashivam',
+            'Vox is a general interest news site for the 21st century. Its mission is simple: Explain the news. Politics, public policy, world affairs, pop culture, science, business, food, sports, and everything else that matters are part of our editorial ambit. Our goal is to move people from curiosity to understanding.',
         },
       ],
     }

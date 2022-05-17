@@ -51,7 +51,7 @@ export default {
           }`
         )
         .then(async (response) => {
-          this.$cookies.set('NTV_Session', response.data.jwt)
+          this.$cookies.set('VoxTV_Session', response.data.jwt)
           this.$store.commit('setLoggedIn', {
             jwt: response.data.jwt,
             user: response.data.user,

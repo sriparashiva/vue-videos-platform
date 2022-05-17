@@ -29,7 +29,7 @@
             @click="signOut"
             class="signOut w-full flex justify-center items-center gap-2 mt-6 p-3 transition bg-accent hover:bg-accent_darken text-accent_lighten font-medium"
           >
-            <Icon :icon="signOutIcon" color="fill-gray-400" class="w-4" />
+            <Icon :icon="signOutIcon" color="fill-white" class="w-4" />
             Sign Out
           </button>
         </div>
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     signOut() {
-      this.$cookies.remove('NTV_Session')
+      this.$cookies.remove('VoxTV_Session')
       this.$store.commit('setLoggedOut')
       this.$store.commit('setAuthChecked', true)
       this.$router.push('/login')
@@ -66,42 +66,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.signOut {
-  color: $accent_dark;
-  transition: 0.2s all ease-in-out;
-  svg {
-    fill: $accent_dark;
-    transition: 0.2s all ease-in-out;
-  }
-  &:hover {
-    color: $accent;
-    svg {
-      fill: $accent;
-    }
-  }
-}
-.separator {
-  &:before,
-  &:after {
-    background-color: $accent_light;
-    content: '';
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 50%;
-    opacity: 40%;
-  }
-
-  &:before {
-    right: 0.5em;
-    margin-left: -50%;
-  }
-
-  &:after {
-    left: 0.5em;
-    margin-right: -50%;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

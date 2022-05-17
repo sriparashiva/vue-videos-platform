@@ -3,8 +3,8 @@
     <div class="footer__profile flex gap-x-3 items-center">
       <img class="rounded-full w-8" :src="$store.getters.user.picture" />
       <div class="profile__text flex flex-col gap-y-0">
-        <p class="text-base">{{ $store.getters.user.name }}</p>
-        <div class="text-xs text-gray-400">E-Kailasian</div>
+        <p class="text-base font-medium">{{ $store.getters.user.name }}</p>
+        <div class="text-xs text-gray-400">Subscriber</div>
       </div>
     </div>
     <div class="footer__form mt-4 flex items-start gap-x-2">
@@ -14,11 +14,7 @@
           class="form__closeIcon absolute right-0 z-2 mt-1 opacity-50"
           @click="chatMessage = ''"
         >
-          <Icon
-            class="w-5 transition hover:fill-white"
-            color="fill-gray-400"
-            :icon="closeIcon"
-          />
+          <Icon class="resetIcon w-5" :icon="closeIcon" />
         </button>
         <input
           ref="messageInput"
@@ -26,26 +22,24 @@
           name="message"
           autocomplete="off"
           id="chatMessage"
-          class="w-full bg-transparent outline-none text-sm border-b-1 border-text_dark border-opacity-30 pb-2 transition hover:border-opacity-80 focus:border-opacity-80"
+          class="w-full bg-transparent outline-none text-sm border-b-1 border-accent_darken border-opacity-30 pb-2 transition hover:border-opacity-80 focus:border-opacity-80"
           placeholder="Say something..."
           maxlength="200"
           v-model="chatMessage"
           @keyup.enter="sendMessage"
         />
-        <p class="text-xs text-dark opacity-40 ml-auto text-right mt-1">
+        <p
+          class="text-xs text-text_lighten dark:text-dark_text opacity-40 ml-auto text-right mt-1"
+        >
           {{ `${chatMessage.length}/200` }}
         </p>
       </div>
       <button
-        class="form__sendButton p-3 transition hover:bg-theme_bg rounded-full"
+        class="form__sendButton p-2 transition hover:bg-accent rounded-full"
         @click="sendMessage"
         :class="chatMessage.length == 0 ? 'disabled' : ''"
       >
-        <Icon
-          class="sendButton__icon w-4"
-          color="fill-gray-100"
-          :icon="sendIcon"
-        />
+        <Icon class="sendButton__icon w-4" :icon="sendIcon" />
       </button>
     </div>
   </div>
@@ -82,19 +76,33 @@ export default {
 </script>
 
 <style lang="scss">
-.footer__form {
-  .form__sendButton {
-    transition: 0.3s all ease-in-out;
-    &:hover {
-      svg {
-        fill: $accent;
-        transform: scale(1.03);
-      }
+.form__sendButton {
+  transition: 0.3s all ease-in-out;
+  svg {
+    fill: $accent;
+  }
+  &:hover {
+    svg {
+      fill: $accent_lighten;
+      transform: scale(1.03);
     }
-    &.disabled {
-      cursor: default;
-      opacity: 0.3;
-    }
+  }
+  &.disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+}
+.resetIcon {
+  fill: $info_darken;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    fill: $text;
+  }
+}
+.dark .resetIcon {
+  fill: $info_darken;
+  &:hover {
+    fill: $accent_lighten;
   }
 }
 </style>

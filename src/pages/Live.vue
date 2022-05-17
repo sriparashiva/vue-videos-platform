@@ -25,14 +25,14 @@
       </div>
       <div class="metaContainer">
         <div class="video__text flex-grow-1 mt-4 mb-8">
-          <h1 class="text-3xl mb-3 font-medium">
+          <h1 class="text-3xl mb-3 font-medium dark:text-dark_text_lighten">
             Vox Livestream
           </h1>
-          <!-- <p class="text-base">
-            KAILASA's Nithyananda TV Livestream: Join the broadcast to get
-            front-row access to live Satsangs, discourses, latest news, events,
-            and teachings from the SPH Nithyananda Paramashivam.
-          </p> -->
+          <p class="text-base text-text_lighten dark:text-dark_text opacity-80">
+            Vox TV Livestream: Join the broadcast to get front-row access to
+            latest productions, documentaries, latest news, and events from Vox
+            Media.
+          </p>
         </div>
         <div class="video__watchmore">
           <h2 class="text-2xl font-medium my-3">
@@ -65,6 +65,7 @@ query {
           publishedAt
           viewCount
           likeCount
+          duration
         }
       }
     }

@@ -74,7 +74,7 @@
           </div>
         </g-link>
         <button
-          class="<md:order-4 order-5 nav__menu__link"
+          class="<md:order-4 order-5 nav__menu__link searchButton"
           :class="
             ` ${$store.getters.searchBarStatus ? 'router-link-active' : ''}`
           "
@@ -102,13 +102,6 @@
         @click="toggleMenu"
         v-if="menuExpanded"
         class="nav__shadow z-1"
-      ></div>
-    </Transition>
-    <Transition name="fade">
-      <div
-        @click="clickSearch"
-        v-if="$store.getters.searchBarStatus"
-        class="search__shadow z-1"
       ></div>
     </Transition>
   </div>
@@ -157,9 +150,10 @@ export default {
       if (
         !this.$route.path.includes('search') ||
         !this.$store.getters.searchBarStatus
-      )
+      ) {
         this.$store.commit('setFromPage', this.$route.path)
-      this.$store.commit('toggleSearchBar')
+        this.$store.commit('toggleSearchBar')
+      }
     },
     toggleDark() {
       this.$store.commit('toggleDark')
@@ -264,6 +258,32 @@ export default {
       background-color: $dark_lighten;
       background-size: 100%;
       transition: background 0s;
+    }
+  }
+  .searchButton {
+    &.router-link-active {
+      color: $primary;
+      background-color: $dark_lighten;
+      svg {
+        fill: $primary;
+      }
+    }
+    &:hover {
+      color: white;
+      background: $dark_lighten
+        radial-gradient(circle, transparent 1%, $dark_lighten 1%) center/15000%;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+.searchButton {
+  &.router-link-active {
+    color: $accent;
+    background-color: $info;
+    svg {
+      fill: $accent;
     }
   }
 }

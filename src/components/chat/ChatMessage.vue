@@ -14,7 +14,7 @@
       :class="received ? 'order-1' : 'order-2'"
     >
       <p
-        class="chatMessage__sender text-11px max-w-full text-text_dark mb-1 mx-1 break-all"
+        class="chatMessage__sender text-11px max-w-full text-text_lighten dark:text-dark_text mb-1 mx-1 break-all"
         :class="received ? 'text-right' : 'text-left'"
       >
         {{ message.author }}
@@ -24,13 +24,13 @@
         :class="received ? 'received' : 'sent'"
       >
         <p
-          class="text-12px mb-1 leading-normal"
+          class="text-12px mb-1 leading-normal text-accent font-medium"
           v-for="(item, index) in message.content"
           :key="index"
         >
           {{ item }}
         </p>
-        <div class="mt-2 text-11px text-text_dark opacity-50">
+        <div class="mt-2 text-11px text-text_lighten opacity-50">
           {{ formatTime(message.updatedAt) }}
         </div>
       </div>
@@ -69,21 +69,37 @@ export default {
       clear: both;
     }
     &.received {
-      background: #543030;
+      background: $white;
       &::after {
         content: '';
         right: 0;
         border-left: 10px solid transparent;
-        border-top: 10px solid #543030;
+        border-top: 10px solid $white;
       }
     }
     &.sent {
-      background: $theme_bg;
+      background: $info;
       &::after {
         content: '';
         left: 0;
         border-right: 10px solid transparent;
-        border-top: 10px solid $theme_bg;
+        border-top: 10px solid $info;
+      }
+    }
+  }
+}
+.dark .chatMessage {
+  .chatMessage__bubble {
+    &.received {
+      background: $info;
+      &::after {
+        border-top: 10px solid $info;
+      }
+    }
+    &.sent {
+      background: $accent_lighten;
+      &::after {
+        border-top: 10px solid $accent_lighten;
       }
     }
   }

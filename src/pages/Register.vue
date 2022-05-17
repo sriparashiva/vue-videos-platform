@@ -62,7 +62,7 @@ export default {
     async handleRegister(user) {
       this.user = user.user
       this.registered = true
-      this.$cookies.set('NTV_Session', user.jwt)
+      this.$cookies.set('VoxTV_Session', user.jwt)
       this.$store.commit('setLoggedIn', { jwt: user.jwt, user: user.user })
       this.$router.push('/account')
     },

@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     async handleLogin(user) {
-      this.$cookies.set('NTV_Session', user.jwt)
+      this.$cookies.set('VoxTV_Session', user.jwt)
       this.$store.commit('setLoggedIn', { jwt: user.jwt, user: user.user })
       this.$store.commit('setAuthChecked', true)
       this.loggedIn = true
