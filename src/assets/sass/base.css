@@ -1,0 +1,97 @@
+html {
+  background-color: #240909;
+  color: #fff1f2;
+  font-family: 'Barlow', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+a {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #fef9c3;
+}
+
+img {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+img.lazyload {
+  opacity: 0;
+}
+
+img.lazyloading {
+  opacity: 0;
+}
+
+img.lazyloaded {
+  opacity: 1;
+}
+
+.fade-enter-active {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.searchBar {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-leave-active {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+img {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+img.lazyload {
+  opacity: 0;
+}
+
+img.lazyloading {
+  opacity: 0;
+}
+
+img.lazyloaded {
+  opacity: 1;
+}
+
+.tippy-tooltip {
+  color: #fff1f2;
+}
+
+.tippy-tooltip .tippy-backdrop {
+  background-color: #240909;
+}
+/*# sourceMappingURL=base.css.map */
