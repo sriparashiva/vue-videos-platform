@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <div class="gridContainer mt-6 px-6 gap-4">
+    <div class="gridContainer my-6 px-6 gap-4">
       <div
         class="live__videoframe aspect-video flex-grow-0 flex-shrink-0 <lg:(w-full mb-6)"
       >
-        <iframe
+        <!-- <iframe
           class="w-full"
           height="100%"
           :src="
@@ -14,7 +14,11 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
+        <img
+          src="@/assets/images/livestream-offline.jpg"
+          class="w-full h-full"
+        />
       </div>
       <div class="live__chat max-h-80vh <lg:(min-h-50vh mb-8)">
         <Chat />
@@ -58,6 +62,9 @@ query {
           slug
           description
           thumbnailURL
+          publishedAt
+          viewCount
+          likeCount
         }
       }
     }
