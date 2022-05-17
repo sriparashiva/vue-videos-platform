@@ -71,7 +71,7 @@ export default {
           platform: 'twitter',
           shareUrl: `https://twitter.com/intent/tweet?url=${this.url}&text=${
             this.title
-          }&via=SriNithyananda&hashtags=Kailasa,Nithyananda`,
+          }&via=voxdotcom&hashtags=Vox`,
         },
         {
           icon: mdiReddit,

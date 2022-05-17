@@ -122,7 +122,7 @@ export default {
           property: 'og:title',
           content: `${
             this.$page.strapi.playlists.data[0].attributes.title
-          } - KAILASA's Nithyananda TV`,
+          } - Vox TV`,
         },
         {
           key: 'og:description',

@@ -1,11 +1,6 @@
 <template>
   <footer class="px-10 py-12 text-sm bg-accent_lighten dark:bg-dark_lighten">
     <img class="h-3rem mx-auto" src="@/assets/images/logo-rect.svg" />
-
-    <!-- <p class="my-2">
-      &copy; {{ new Date().getFullYear() }} Sri Nithyananda Paramashivam. All
-      rights reserved.
-    </p> -->
     <div class="socialLinks my-4 justify-center items-center flex gap-x-4">
       <a
         v-for="(link, index) in socialLinks"

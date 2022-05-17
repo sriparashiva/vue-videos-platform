@@ -65,7 +65,7 @@ export default {
     SocialShare,
   },
   metaInfo: {
-    title: 'Livestreams, Events, Discourses of SPH Nithyananda Paramashivam',
+    title: 'Vox - Understand the News',
   },
   mixins: [loadingBar],
   data() {
