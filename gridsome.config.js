@@ -18,7 +18,7 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: 'Vox - Understand the News',
   siteDescription:
-    'Vox is a general interest news site for the 21st century. Its mission is simple: Explain the news. Politics, public policy, world affairs, pop culture, science, business, food, sports, and everything else that matters are part of our editorial ambit. Our goal is to move people from curiosity to understanding.',
+    'Vox is a general interest news site for the 21st century. Its mission is simple: Explain the news. Politics, public policy, world affairs, pop culture, science, business, food, sports and everything else that matters are part of our editorial ambit. Our goal is to move people from curiosity to understanding.',
   icon: './src/favicon.png',
   siteUrl: 'https://voxtv.vercel.app',
   plugins: [
