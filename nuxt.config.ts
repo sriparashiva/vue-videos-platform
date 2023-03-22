@@ -64,11 +64,11 @@ export default defineNuxtConfig({
         },
         {
           name: `og:image`,
-          content: `https://nithyananda.tv/vox-og.jpg`,
+          content: `https://${process.env.NUXT_WEBSITE_DOMAIN}/vox-og.jpg`,
         },
         {
           name: `author`,
-          content: `Vox Media`,
+          content: `Rohit Mistry`,
         },
       ],
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],

@@ -1,10 +1,10 @@
-import VueGtag from 'vue-gtag-next'
+import VueGtag from 'vue-gtag'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
   if (config.public.productionMode) {
     nuxtApp.vueApp.use(VueGtag, {
-      property: {
+      config: {
         id: config.public.googleAnalyticsId,
       },
     })
