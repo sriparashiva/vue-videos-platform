@@ -1,14 +1,42 @@
-# Default starter for Gridsome
+# Nuxt 3 Minimal Starter
 
-This is the project you get when you run `gridsome create new-project`.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-### 1. Install Gridsome CLI tool if you don't have
+## Setup
 
-`npm install --global @gridsome/cli`
+Make sure to install the dependencies:
 
-### 2. Create a Gridsome project
+```bash
+# yarn
+yarn install
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
