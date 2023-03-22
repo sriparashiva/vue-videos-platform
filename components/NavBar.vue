@@ -4,8 +4,13 @@
       ref="nav"
       class="nav__bar w-screen h-14 fixed left-0 <md:bottom-0 md:(h-screen w-18 top-0) bg-white dark:bg-dark_lighten border-r-1 border-t-1 border-warm-gray-600 border-opacity-20 dark:border-opacity-40 md:(flex flex-col) transition z-10"
     >
-      <NuxtLink to="/" class="bg-primary w-full py-1">
+      <NuxtLink
+        aria-label="Go to homepage"
+        to="/"
+        class="bg-primary w-full py-1"
+      >
         <img
+          alt="Brand logo of Vox"
           class="nav__logo <md:hidden mx-auto w-18"
           src="@/assets/images/logo-rect.svg"
         />
@@ -14,6 +19,7 @@
         class="nav__menu flex justify-between items-center md:(flex-col justify-center items-start) <md:h-full w-full"
       >
         <button
+          aria-label="Expand Menu"
           class="nav__menu__link nav__toggle flex flex-col gap-y-1 outline-none"
           @click="toggleMenu"
         >
@@ -22,10 +28,14 @@
         </button>
         <ClientOnly>
           <NuxtLink
+            :aria-label="`Go to ${
+              loginStore.getLoggedIn ? 'Account page' : 'Login page'
+            }`"
             class="nav__menu__link nav__account flex flex-col gap-y-0 gap-x-0 outline-none"
             :to="loginStore.getLoggedIn ? '/account' : '/login'"
           >
             <img
+              alt="Avatar image"
               v-if="loginStore.getLoggedIn && loginStore.getUser"
               :src="loginStore.getUser.picture"
               class="w-6 rounded-full"
@@ -37,6 +47,7 @@
           </NuxtLink>
         </ClientOnly>
         <NuxtLink
+          aria-label="Go to homepage"
           class="nav__menu__link flex flex-col gap-y-1 outline-none"
           to="/"
         >
@@ -44,6 +55,7 @@
           <div class="menu__text text-center font-medium">Home</div>
         </NuxtLink>
         <NuxtLink
+          aria-label="Go to explore page"
           class="nav__menu__link flex flex-col gap-y-1 outline-none"
           to="/explore"
         >
@@ -51,6 +63,7 @@
           <div class="menu__text font-medium text-center">Explore</div>
         </NuxtLink>
         <button
+          aria-label="Search"
           class="nav__menu__link searchButton"
           :class="` ${searchStore.searchBarStatus ? 'router-link-active' : ''}`"
           @click="clickSearch"
@@ -60,6 +73,7 @@
         </button>
       </div>
       <button
+        :aria-label="themeStore.dark ? 'Light Mode' : 'Dark Mode'"
         class="darkMode__toggle my-4 mx-auto p-3 transition"
         v-if="menuExpanded"
         @click="toggleDark"

@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="props.moreLink">
+  <NuxtLink aria-label="View all videos" :to="props.moreLink">
     <div
       class="moreCard flex justify-center items-center text-lg ml-0.5 bg-accent_lighten dark:bg-dark_lighten font-bold"
     >

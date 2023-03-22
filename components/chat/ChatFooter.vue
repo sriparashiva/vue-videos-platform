@@ -1,7 +1,11 @@
 <template>
   <div class="footer__loggedIn">
     <div class="footer__profile flex gap-x-3 items-center">
-      <img class="rounded-full w-8" :src="loginStore.getUser.picture" />
+      <img
+        alt="Avatar image"
+        class="rounded-full w-8"
+        :src="loginStore.getUser.picture"
+      />
       <div class="profile__text flex flex-col gap-y-0">
         <p class="text-base font-medium">{{ loginStore.getUser.name }}</p>
         <div class="text-xs text-gray-400">E-Kailasian</div>
@@ -10,6 +14,7 @@
     <div class="footer__form mt-4 flex items-start gap-x-2">
       <div class="form__input w-full relative">
         <button
+          aria-label="Clear"
           v-if="chatMessage.length > 0"
           class="form__closeIcon absolute right-0 z-2 mt-1 opacity-50"
           @click="chatMessage = ''"
@@ -35,6 +40,7 @@
         </p>
       </div>
       <button
+        aria-label="Send"
         class="form__sendButton p-2 transition hover:bg-accent rounded-full"
         @click="sendMessage"
         :class="chatMessage.length == 0 ? 'disabled' : ''"

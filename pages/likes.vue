@@ -4,6 +4,7 @@
     v-if="loginStore.getLoggedIn && !loader"
   >
     <NuxtLink
+      aria-label="Return to account page"
       class="goBack flex items-center text-base gap-0 mb-8"
       to="/account"
     >

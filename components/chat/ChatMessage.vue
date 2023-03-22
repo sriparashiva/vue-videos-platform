@@ -7,7 +7,11 @@
       class="chatMessage__avatar flex-grow-0 flex-shrink-0 rounded-full overflow-hidden w-9"
       :class="received ? 'order-2' : 'order-1'"
     >
-      <img class="w-full h-full object-cover" :src="message.picture" />
+      <img
+        alt="Avatar image"
+        class="w-full h-full object-cover"
+        :src="message.picture"
+      />
     </div>
     <div
       class="chatMessage__content flex-grow flex-shrink"

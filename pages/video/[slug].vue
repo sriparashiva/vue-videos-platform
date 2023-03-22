@@ -31,6 +31,7 @@
           </div>
           <div v-if="loginStore.getLoggedIn" class="video__like">
             <button
+              aria-label="Like"
               @click="handleLikeVideo"
               class="like__button flex gap-2 items-center text-text_lighten dark:text-dark_text transition hover:text-accent_darken hover:dark:text-accent hover:opacity-100"
             >

@@ -10,6 +10,7 @@
       <div>
         <NuxtLink
           to="/login"
+          aria-label="Sign in to Chat"
           class="googleLogin flex justify-center items-center gap-2 mt-6 py-3 px-5 transition bg-accent hover:bg-accent_darken"
         >
           <Icon :icon="loginIcon" color="fill-white w-4" />

@@ -2,7 +2,11 @@
   <footer
     class="px-10 py-12 <md:pb-18 text-sm bg-accent_lighten dark:bg-dark_lighten"
   >
-    <img class="h-3rem mx-auto" src="@/assets/images/logo-rect.svg" />
+    <img
+      alt="Brand logo of Vox"
+      class="h-3rem mx-auto"
+      src="@/assets/images/logo-rect.svg"
+    />
     <div
       class="my-2 text-text_lighten dark:text-dark_text text-center opacity-80"
     >
@@ -23,6 +27,7 @@
         :href="link.url"
         target="_blank"
         rel="noopener noreferrer"
+        :aria-label="`Visit Vox on ${link.name}`"
       >
         <Icon class="w-5 transition" :icon="link.icon" />
       </a>
@@ -45,26 +50,32 @@
       return {
         socialLinks: [
           {
+            name: 'Facebook',
             icon: mdiFacebook,
             url: 'https://facebook.com/Vox',
           },
           {
+            name: 'Youtube',
             icon: mdiYoutube,
             url: 'https://www.youtube.com/@Vox',
           },
           {
+            name: 'Twitter',
             icon: mdiTwitter,
             url: 'https://twitter.com/voxdotcom',
           },
           {
+            name: 'Instagram',
             icon: mdiInstagram,
             url: 'https://instagram.com/voxdotcom',
           },
           {
+            name: 'Spotify',
             icon: mdiSpotify,
             url: 'https://open.spotify.com/show/3pXx5SXzXwJxnf4A5pWN2A',
           },
           {
+            name: 'Web',
             icon: mdiWeb,
             url: 'https://vox.com',
           },

@@ -1,5 +1,6 @@
 <template>
   <NuxtLink
+    aria-label="Go to video page"
     class="videoCard videoCard__link"
     :to="`/video/${props.video.attributes.slug}`"
   >
@@ -7,6 +8,7 @@
       class="videoThumbnail__container bg-accent_lighten dark:bg-dark_lighten aspect-video relative"
     >
       <img
+        alt=""
         :data-src="`${config.public.strapi.url}${
           props.video.attributes.coverImage.data.attributes.formats &&
           props.video.attributes.coverImage.data.attributes.formats.xsmall

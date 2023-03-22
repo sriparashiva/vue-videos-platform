@@ -12,7 +12,7 @@
     "@mdi/js": "^7.1.96",
     "@nuxtjs/strapi": "^1.7.1",
     "@pinia/nuxt": "^0.4.6",
-    "nuxt": "^3.2.3",
+    "nuxt": "^3.3.1",
     "nuxt-schema-org": "^2.1.1",
     "nuxt-simple-sitemap": "^1.0.7",
     "nuxt-windicss": "^2.6.0",

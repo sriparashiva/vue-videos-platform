@@ -6,6 +6,7 @@
     <div class="hero__cover overflow-hidden">
       <div class="w-full h-full aspect-video">
         <img
+          alt=""
           :src="`${config.public.strapi.url}${props.video.attributes.coverImage.data.attributes.url}`"
           class="hero__cover__img w-full h-full lazyload object-cover object-center"
         />
@@ -35,12 +36,14 @@
       </p>
       <NuxtLink
         v-if="route.path == '/'"
+        aria-label="Watch video"
         :to="`/video/${props.video.attributes.slug}`"
         class="hero__morebutton mt-4 bg-accent px-5 py-2 w-max flex justify-center items-center gap-x-1 text-sm transition-colors hover:bg-accent_darken text-white hover:text-white font-medium"
         ><Icon color="fill-white" class="w-5" :icon="playIcon" />Watch
         Now</NuxtLink
       >
       <button
+        aria-label="Play Video"
         v-else
         @click="openVideoModal"
         class="hero__playbutton mt-4 bg-accent px-5 py-2 w-max flex justify-center items-center gap-x-1 text-sm transition-colors hover:bg-accent_darken text-white hover:text-white font-medium"

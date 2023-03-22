@@ -6,6 +6,7 @@
     <NuxtLink
       class="goBack flex items-center text-base gap-0 mb-8"
       to="/account"
+      aria-label="Return to account page"
     >
       <Icon :icon="backIcon" class="w-7" />
       Go Back

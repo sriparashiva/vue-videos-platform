@@ -14,6 +14,7 @@
         <p class="text-base text-red-400 opacity-70 text-center">
           {{ strapiError }} <br />Please try
           <NuxtLink
+            aria-label="Log in again"
             class="font-medium text-accent dark:text-accent hover:dark:text-accent_lighten"
             to="/login"
             >logging in again</NuxtLink

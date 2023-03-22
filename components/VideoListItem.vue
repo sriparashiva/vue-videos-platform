@@ -1,6 +1,7 @@
 <template>
   <NuxtLink
     v-if="video"
+    aria-label="Go to video page"
     class="videoCard videoCard__link flex gap-3"
     :to="`/video/${video.attributes.slug}`"
   >
@@ -8,6 +9,7 @@
       class="videoThumbnail__container bg-accent_lighten dark:bg-dark_lighten aspect-video relative flex-grow-0 flex-shrink-0 basis-3/12"
     >
       <img
+        alt=""
         :data-src="`${config.public.strapi.url}${
           props.video.attributes.coverImage.data.attributes.formats &&
           props.video.attributes.coverImage.data.attributes.formats.xsmall

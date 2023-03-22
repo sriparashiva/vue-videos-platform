@@ -12,6 +12,7 @@
       <p class="text-base text-text_lighten dark:text-dark_text">
         Don't have an account?
         <NuxtLink
+          aria-label="Sign up"
           class="font-medium text-accent dark:text-accent hover:dark:text-accent_lighten"
           to="/register"
           >Sign up</NuxtLink
@@ -19,6 +20,7 @@
       </p>
       <a
         :href="`${config.public.strapi.url}/api/connect/google`"
+        aria-label="Sign in with Google"
         class="googleLogin flex justify-center items-center gap-2 mt-6 p-3 transition bg-accent hover:bg-accent_darken"
       >
         <Icon :icon="googleIcon" color="fill-white" class="w-5" />

@@ -13,6 +13,7 @@
         <p class="text-base text-text dark:text-dark_text opacity-70">
           Already have an account?
           <NuxtLink
+            aria-label="Log in"
             class="font-medium text-accent dark:text-accent hover:dark:text-accent_lighten"
             to="/login"
             >Log in</NuxtLink

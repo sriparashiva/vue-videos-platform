@@ -15,6 +15,7 @@
       <NuxtLink
         v-if="!route.path.startsWith('/video/')"
         :to="`/playlist/${props.playlist.attributes.slug}`"
+        aria-label="Go to playlist page"
         class="text-sm text-accent dark:text-dark_accent text-opacity-80 dark:text-opacity-100 pt-1 carousel__header__moreLink hover:text-accent_darken hover:dark:text-accent_lighten font-medium"
       >
         View All

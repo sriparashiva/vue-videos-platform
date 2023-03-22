@@ -14,6 +14,7 @@
       <p class="text-sm">You may want to head back to the homepage.</p>
       <NuxtLink
         to="/"
+        aria-label="Return to homepage"
         class="mt-4 bg-accent px-5 py-2 w-max flex justify-center items-center gap-x-1 text-sm transition-colors hover:bg-accent_darken text-white dark:text-white hover:text-white dark:hover:text-white font-medium"
       >
         Return Home

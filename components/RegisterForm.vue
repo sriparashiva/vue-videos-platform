@@ -124,6 +124,7 @@
         {{ strapiError }}
       </p>
       <button
+        aria-label="Register"
         v-if="!submitLoader"
         type="submit"
         class="submitForm flex justify-center items-center gap-2 p-3 transition bg-accent hover:bg-accent_darken text-accent_lighten font-medium"

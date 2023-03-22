@@ -5,7 +5,11 @@
     >
       <div v-if="loginStore.getLoggedIn && loginStore.getUser">
         <div class="flex justify-center gap-3 mb-5 items-center">
-          <img :src="loginStore.getUser.picture" class="rounded-full w-14" />
+          <img
+            alt="Avatar image"
+            :src="loginStore.getUser.picture"
+            class="rounded-full w-14"
+          />
           <div class="text-2xl font-bold text-text dark:text-dark_text_lighten">
             {{ loginStore.getUser.name }}
           </div>
@@ -14,6 +18,7 @@
           v-for="action in actions"
           :key="action.url"
           :to="action.url"
+          :aria-label="`Open ${action.title}`"
           class="actionButton flex gap-3 items-center justify-center py-4 text-lg"
         >
           <Icon :icon="action.icon" class="w-5" />
@@ -25,6 +30,7 @@
           or
         </p>
         <button
+          aria-label="Sign out"
           @click="handleSignOut"
           class="signOut w-full flex justify-center items-center gap-2 mt-6 p-3 rounded transition bg-transparent border-accent border-1 border-opacity-40 font-medium"
         >
