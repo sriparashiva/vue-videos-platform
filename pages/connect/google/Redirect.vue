@@ -34,23 +34,12 @@
 
   const loader = ref(true)
   const strapiError = ref('')
-  const config = useRuntimeConfig()
   const route = useRoute()
   const router = useRouter()
-  const sessionCookie = useCookie('NTV_Session', {
-    sameSite: true,
-  })
   const loginStore = useLoginStore()
   onMounted(async () => {
     if (route.query.access_token) {
       try {
-        // const resp: any = await $fetch(
-        //   `http://localhost:1337/api/auth/google/callback?access_token=${route.query.access_token}`
-        // )
-        // const resp: any = await $fetch(
-        //   `${config.public.strapi.url}/api/auth/google/callback?access_token=${route.query.access_token}`
-        // )
-        // sessionCookie.value = resp.jwt
         await authenticateProvider(
           'google',
           route.query.access_token.toString()

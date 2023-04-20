@@ -24,12 +24,12 @@
   .loader:before {
     animation: ball1 1.3s infinite;
     background-color: $primary;
-    box-shadow: 30px 0 0 #f8b334;
+    box-shadow: 30px 0 0 $accent;
     margin-bottom: 10px;
   }
   .loader:after {
     animation: ball2 1.3s infinite;
-    background-color: #f8b334;
+    background-color: $accent;
     box-shadow: 30px 0 0 #97bf0d;
   }
 
@@ -50,16 +50,16 @@
 
   @keyframes ball1 {
     0% {
-      box-shadow: 30px 0 0 #f8b334;
+      box-shadow: 30px 0 0 $accent;
     }
     50% {
-      box-shadow: 0 0 0 #f8b334;
+      box-shadow: 0 0 0 $accent;
       margin-bottom: 0;
       -webkit-transform: translate(15px, 15px);
       -moz-transform: translate(15px, 15px);
     }
     100% {
-      box-shadow: 30px 0 0 #f8b334;
+      box-shadow: 30px 0 0 $accent;
       margin-bottom: 10px;
     }
   }
@@ -79,61 +79,4 @@
       margin-top: 0;
     }
   }
-
-  // .Loader {
-  //   position: relative;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 100%;
-  //   max-width: $loadersize;
-  //   margin-top: calc($loadersize / 2);
-  //   margin-bottom: calc($loadersize / 2);
-  //   &:before,
-  //   &:after {
-  //     content: '';
-  //     position: absolute;
-  //     border-radius: 50%;
-  //     animation-duration: 1.8s;
-  //     animation-iteration-count: infinite;
-  //     animation-timing-function: $Loader-timing;
-  //     filter: drop-shadow(0 0 calc($Loader-offset / 2.25) rgba($accent, 0.75));
-  //   }
-  //   &:before {
-  //     width: 100%;
-  //     padding-bottom: 100%;
-  //     box-shadow: inset 0 0 0 $Loader-offset $accent;
-  //     animation-name: pulsA;
-  //   }
-  //   &:after {
-  //     width: calc(100% - #{$Loader-offset}* 2);
-  //     padding-bottom: calc(100% - #{$Loader-offset}* 2);
-  //     box-shadow: 0 0 0 0 $accent;
-  //     animation-name: pulsB;
-  //   }
-  // }
-
-  // @keyframes pulsA {
-  //   0% {
-  //     box-shadow: inset 0 0 0 $Loader-offset $accent;
-  //     opacity: 1;
-  //   }
-  //   50%,
-  //   100% {
-  //     box-shadow: inset 0 0 0 0 $primary;
-  //     opacity: 0;
-  //   }
-  // }
-
-  // @keyframes pulsB {
-  //   0%,
-  //   50% {
-  //     box-shadow: 0 0 0 0 $primary;
-  //     opacity: 0;
-  //   }
-  //   100% {
-  //     box-shadow: 0 0 0 $Loader-offset $accent;
-  //     opacity: 1;
-  //   }
-  // }
 </style>

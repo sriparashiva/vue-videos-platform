@@ -123,7 +123,7 @@ export default defineNuxtConfig({
     cookie: {
       sameSite: true,
     },
-    cookieName: 'NTV_Session',
+    cookieName: 'Vox_Session',
   },
   windicss: {
     config: {
@@ -170,7 +170,7 @@ export default defineNuxtConfig({
             text_lighten: '#626262',
             info: '#E9E7E8',
             info_darken: '#b4b4b4',
-            dark_info: ' #282a2b',
+            dark_info: '#282a2b',
             theme_lighter: '#282a2b',
             dark: '#181A1B',
             dark_lighten: '#202223',

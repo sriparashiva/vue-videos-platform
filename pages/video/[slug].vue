@@ -79,7 +79,7 @@
   const video: Video = await getVideo(route.params.slug.toString())
 
   useHead({
-    title: `${video.attributes.title} - Nithyananda TV`,
+    title: `${video.attributes.title} - Vox TV`,
     meta: [
       {
         name: 'description',
@@ -87,7 +87,7 @@
       },
       {
         name: 'og:title',
-        content: `${video.attributes.title} - Nithyananda TV`,
+        content: `${video.attributes.title} - Vox TV`,
       },
       {
         name: 'og:description',

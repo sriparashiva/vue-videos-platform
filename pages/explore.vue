@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
   useHead({
-    title: `Explore Videos and Playlists - Nithyananda TV`,
+    title: `Explore Videos and Playlists - Vox TV`,
   })
 
   const playlists = ref<Array<Playlist>>([])

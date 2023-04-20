@@ -29,7 +29,7 @@
   )
 
   useHead({
-    title: `${playlist.attributes.title} - Nithyananda TV`,
+    title: `${playlist.attributes.title} - Vox TV`,
     meta: [
       {
         name: 'description',
@@ -37,7 +37,7 @@
       },
       {
         name: 'og:title',
-        content: `${playlist.attributes.title} - Nithyananda TV`,
+        content: `${playlist.attributes.title} - Vox TV`,
       },
       {
         name: 'og:description',

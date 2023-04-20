@@ -146,7 +146,6 @@
   } from '@mdi/js'
   import { Form, Field, ErrorMessage } from 'vee-validate'
 
-  const config = useRuntimeConfig()
   const user = useStrapiUser()
   const token = useStrapiToken()
   const { register } = useStrapiAuth()
@@ -201,20 +200,6 @@
   const onSubmit = async () => {
     submitLoader.value = true
     try {
-      // const response: any = await $fetch(
-      //   `${config.public.strapi.url}/api/auth/local/register`,
-      //   {
-      //     method: 'POST',
-      //     body: {
-      //       givenName: fname.value,
-      //       familyName: lname.value,
-      //       name: `${fname.value} ${lname.value}`,
-      //       username: email.value,
-      //       email: email.value,
-      //       password: password.value,
-      //     },
-      //   }
-      // )
       await register({
         username: email.value,
         email: email.value,

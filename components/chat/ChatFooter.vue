@@ -8,7 +8,7 @@
       />
       <div class="profile__text flex flex-col gap-y-0">
         <p class="text-base font-medium">{{ loginStore.getUser.name }}</p>
-        <div class="text-xs text-gray-400">E-Kailasian</div>
+        <div class="text-xs text-gray-400">Member</div>
       </div>
     </div>
     <div class="footer__form mt-4 flex items-start gap-x-2">

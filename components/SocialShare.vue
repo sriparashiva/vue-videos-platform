@@ -74,7 +74,7 @@
           {
             icon: mdiTwitter,
             platform: 'twitter',
-            shareUrl: `https://twitter.com/intent/tweet?url=${this.url}&text=${this.title}&via=SriNithyananda&hashtags=Kailasa,Nithyananda`,
+            shareUrl: `https://twitter.com/intent/tweet?url=${this.url}&text=${this.title}&via=voxdotcom&hashtags=Vox`,
           },
           {
             icon: mdiReddit,

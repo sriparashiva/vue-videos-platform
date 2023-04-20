@@ -46,22 +46,20 @@
 <script setup lang="ts">
   import {
     mdiLogoutVariant as signOutIcon,
-    mdiCompassOutline as expoloreIcon,
     mdiHistory,
     mdiThumbUpOutline,
   } from '@mdi/js'
   import { useLoginStore } from '~~/stores/login'
 
+  const { logout } = useStrapiAuth()
+
   useHead({
-    title: `My Account - Nithyananda TV`,
+    title: `My Account - Vox TV`,
   })
 
   definePageMeta({
     middleware: 'auth',
   })
-
-  // const user = useStrapiUser()
-  // const token = useStrapiToken()
 
   const actions = [
     { title: 'Watch History', icon: mdiHistory, url: '/history' },
@@ -72,10 +70,12 @@
   const router = useRouter()
 
   const handleSignOut = () => {
-    const sessionCookie = useCookie('NTV_Session')
-    sessionCookie.value = null
+    // const sessionCookie = useCookie('Vox_Session')
+    // sessionCookie.value = null
+    logout()
     loginStore.setLoggedOut()
     loginStore.setAuthChecked(true)
+    console.log('Redirecting to login')
     router.push('/login')
   }
 </script>

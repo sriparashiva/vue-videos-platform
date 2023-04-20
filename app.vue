@@ -1,13 +1,6 @@
 <template>
   <NuxtLayout>
-    <NuxtLoadingIndicator
-      :height="themeStore.dark ? 3 : 5"
-      :color="
-        themeStore.dark
-          ? 'linear-gradient(90deg, rgba(255,172,62,1) 0%, rgba(242,206,159,1) 50%, rgba(255,240,221,1) 100%)'
-          : 'linear-gradient(90deg, rgba(255,177,0,1) 0%, rgba(255,213,156,1) 50%, rgba(255,240,221,1) 100%)'
-      "
-    />
+    <NuxtLoadingIndicator :height="3" color="#FFF300" />
     <NuxtPage />
   </NuxtLayout>
 </template>

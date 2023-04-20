@@ -62,6 +62,24 @@
           <Icon :icon="exploreIcon" />
           <div class="menu__text font-medium text-center">Explore</div>
         </NuxtLink>
+        <NuxtLink
+          aria-label="Go to livestream page"
+          class="nav__menu__link flex flex-col gap-y-1 outline-none"
+          to="/live"
+        >
+          <div class="live__icon__container relative" ref="liveStatus">
+            <svg
+              viewBox="2 2 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              class="live__icon"
+            >
+              <path
+                d="M6.343 4.938a1 1 0 0 1 0 1.415 8.003 8.003 0 0 0 0 11.317 1 1 0 1 1-1.415 1.414c-3.906-3.906-3.906-10.24 0-14.146a1 1 0 0 1 1.415 0Zm12.731 0c3.906 3.907 3.906 10.24 0 14.146a1 1 0 0 1-1.414-1.414 8.003 8.003 0 0 0 0-11.317 1 1 0 0 1 1.414-1.415ZM9.31 7.812a1 1 0 0 1 0 1.414 3.92 3.92 0 0 0 0 5.544 1 1 0 1 1-1.414 1.414 5.92 5.92 0 0 1 0-8.372 1 1 0 0 1 1.414 0Zm6.959 0a5.92 5.92 0 0 1 0 8.372 1 1 0 0 1-1.415-1.414 3.92 3.92 0 0 0 0-5.544 1 1 0 0 1 1.415-1.414Zm-4.187 2.77a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+              />
+            </svg>
+          </div>
+          <div class="menu__text font-medium text-center">Live</div>
+        </NuxtLink>
         <button
           aria-label="Search"
           class="nav__menu__link searchButton"

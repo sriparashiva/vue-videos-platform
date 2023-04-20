@@ -48,7 +48,7 @@
   import { useLoginStore } from '~~/stores/login'
 
   useHead({
-    title: `Login - Nithyananda TV`,
+    title: `Login - Vox TV`,
   })
 
   definePageMeta({ middleware: ['guest'] })
@@ -56,7 +56,6 @@
   const config = useRuntimeConfig()
   const loginStore = useLoginStore()
   const loggedIn = ref(false)
-  // const sessionCookie = useCookie('NTV_Session')
   const router = useRouter()
   const handleLogin = (user: any) => {
     // sessionCookie.value = user.jwt

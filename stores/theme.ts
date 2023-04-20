@@ -12,7 +12,7 @@ export const useThemeStore = defineStore('theme', {
 
   actions: {
     initializeTheme() {
-      if (localStorage.getItem('NTV_THEME_PREFERENCE') == 'dark') {
+      if (localStorage.getItem('Vox_Theme_Preference') == 'dark') {
         this.themePreference = 'dark'
         this.themeStatus = 'dark'
         const htmlRoot = document.documentElement
@@ -23,12 +23,12 @@ export const useThemeStore = defineStore('theme', {
       const htmlRoot = document.documentElement
       if (this.themeStatus === 'dark') {
         this.themeStatus = 'light'
-        localStorage.setItem('NTV_THEME_PREFERENCE', 'light')
+        localStorage.setItem('Vox_Theme_Preference', 'light')
         if (htmlRoot && htmlRoot.classList.contains('dark'))
           htmlRoot.classList.remove('dark')
       } else {
         this.themeStatus = 'dark'
-        localStorage.setItem('NTV_THEME_PREFERENCE', 'dark')
+        localStorage.setItem('Vox_Theme_Preference', 'dark')
         if (htmlRoot && !htmlRoot.classList.contains('dark'))
           htmlRoot.classList.add('dark')
       }

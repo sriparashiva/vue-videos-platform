@@ -36,7 +36,7 @@
   import { useLoginStore } from '~~/stores/login'
 
   useHead({
-    title: `Liked Videos - Nithyananda TV`,
+    title: `Liked Videos - Vox TV`,
   })
 
   definePageMeta({

@@ -28,7 +28,7 @@
   import { useSearchStore } from '~~/stores/search'
 
   useHead({
-    title: `Search Results - Nithyananda TV`,
+    title: `Search Results - Vox TV`,
   })
 
   const activeTab = ref('videos')

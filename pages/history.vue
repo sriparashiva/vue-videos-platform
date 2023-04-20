@@ -39,7 +39,7 @@
   import { mdiChevronLeft as backIcon } from '@mdi/js'
 
   useHead({
-    title: `Watch History - Nithyananda TV`,
+    title: `Watch History - Vox TV`,
   })
 
   definePageMeta({
