@@ -1,42 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Full-Stack Videos Platform (Vue.js, Node.js)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository contains the front-end of a full-stack web app featuring videos and playlists from [Vox's YouTube channel](https://www.youtube.com/@Vox).
 
-## Setup
+<p align="center">
+<a href="https://lobster-app-9sk6k.ondigitalocean.app/">🖥 Online Preview</a>
+</p>
 
-Make sure to install the dependencies:
+## Tech Stack
 
-```bash
-# yarn
-yarn install
+**Front-end:**
 
-# npm
-npm install
+- [Nuxt3](https://nuxt.com) (Vue.js framework) - SSR, ESR, File-based routing, components auto importing, modules, etc.
+- [WindiCSS](https://windicss.org) - Next generation utility-first CSS framework.
+- Icons from [Material Design Icons](https://materialdesignicons.com/)
+- State Management via [Pinia](https://pinia.vuejs.org/)
+- TypeScript
 
-# pnpm
-pnpm install
-```
+**Back-end:**
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Customized Node.js based [Strapi CMS](https://strapi.io) with GraphQL
+- Google authentication using [OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) and JSON Web Tokens
+- Live chat microservice using [Express](https://expressjs.com/) and [Socket.IO](https://socket.io/)
